@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Fruit Basket</title>
+
+    <!-- Bootstrap -->
+    
+    <link type="text/css" rel="stylesheet" href="{% static 'jquery-ui/jquery-ui.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'jquery-ui/jquery-ui.structure.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'jquery-ui/jquery-ui.theme.css' %}">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+       <style>
+      li{
+      color:white;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+          
+<!--Navigation bar-->
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        
+      </button>
+      <a class="navbar-brand" href="">Fruit Basket</a>
+    </div>
+
+    <!--Collapse Navbar-->
+    <div class="collapse navbar-collapse" id="navcollapse">
+    <ul class="nav navbar-nav">
+      <li><a href="">Home</a></li>
+      <li><a href="products">Products</a></li>
+      <li class="active"><a href="about">About Us</a></li>
+      {% if user.is_authenticated %}
+      <li>Hello,{{user.first_name}}</li>
+      <li><a href="logout">Logout</a></li>
+      {% else %}
+      <li><a href="register">Register</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+      {% endif %}
+      <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+    </ul>
+    
+      
+    <form class="navbar-form navbar-right">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <a href=""><span class="glyphicon glyphicon-search"></span></a>
+    </form>
+  </div>
+
+
+  </div>
+</nav>
+   
+
+
+
+   <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="ab1">
+          <div class="thumbnail profile">
+               <img class="profile img-responsive img-circle" src="{% static 'my pic.jpg' %}" alt="profile" width="300" height="300">
+               <div class="caption">
+                <h3>Boggula Saineha Reddy</h3>
+                <h6>Reg no:122015016</h6>
+               </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="ab2">
+          <h3>We Focuse On Delivering Healthy and fresh Fruits And User Experiences.</h3>
+          <p>We Provide all varieties of fruits in our website.All fruits are fresh and We provide door delivery all around India.We also provide discount for daily customers.We supply a unique service customer focused with 24/7 response, Deep knowledge in the fruit business with 30 years market experience and year-round supply from differents countries with the highest quality fruit</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row ab3">
+      <div class="col-md-4">
+         <div class="ab4">
+         <h2>Free Shipping</h2>
+         <br><br>
+         <p>Our Website provides free shipping all over India.And moreover we deliver fruits within 24 hours.Everywhere we have our agencies</p>
+       </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="ab5">
+         <h2>100% Money Back Gaurantee</h2>
+         <br>
+         <p>We assure you that any product if you donot like we will replace the product or 100% money will be given back</p>
+      </div>
+    </div>
+
+      <div class="col-md-4">
+        <div class="ab6">
+         <h2>Online Support 24/7</h2>
+         <br>
+         <p>Our Website provides services 24/7 delivery and any time you can place your order</p>
+      </div>
+    </div>
+    </div>
+
+   </div>
+   <br><br>
+<!--Footer--> 
+<div class="container-fluid bg-black">
+  
+  <div class="row foot">
+    <div class="col-sm-4">
+      <div class="footer1">
+      
+      <h3>Contact </h3>
+      <p><span class="glyphicon glyphicon-map-marker"></span>    Nellore, Andhra Pradesh</p>
+      <p><span class="glyphicon glyphicon-phone"></span>   6573241213</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>  fruitbasket@gmail.com</p>
+    </div>
+   </div>
+   <div class="col-md-4">
+    <div class="footer2">
+    <h1><b>Products</b></h1><br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="subf1">
+         
+         <p><a href="">Apples</a><p>
+         <p><a href="">Oranges</a></p>
+         <p><a href="">Bananas</a></p>
+         <p><a href="">Pear</a></p>
+         <p><a href="">Pomegranate</a></p>
+         <p><a href="">Grapes</a></p>
+         <p><a href="">Lemons</a></p>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="subf2">
+          <p><a href="">Watermelon</a><p>
+         <p><a href="">Papaya</a></p>
+         <p><a href="">Jack Fruit</a></p>
+         <p><a href="">Pineapple</a></p>
+         <p><a href="">Custard apple</a></p>
+         <p><a href="">Black grapes</a></p>
+         <p><a href="">Strawberry</a></p>
+        </div>
+          
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+    <div class="col-md-4">
+      <h1><b>Company</b></h1>
+      <p><a href="about">About Us</a></p>
+      <p><a href="contact">Contact</a></p>
+  
+   </div>
+
+ </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'jquery-3.5.1.js' %}"></script>
+  <script src="{% static 'jquery-ui/jquery-ui.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+
+        });
+   </script>
+  </body>
+</html>
